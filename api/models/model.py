@@ -24,6 +24,9 @@ from .account import Account, Tenant
 from .engine import db
 from .types import StringUUID
 
+if TYPE_CHECKING:
+    from .workflow import Workflow
+
 
 class DifySetup(db.Model):
     __tablename__ = "dify_setups"
